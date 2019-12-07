@@ -56,6 +56,8 @@ class App extends Component {
     localStorage.removeItem('userId');
   };
 
+  //
+
   loginHandler = (event, authData) => {
     event.preventDefault();
     this.setState({ authLoading: true });
