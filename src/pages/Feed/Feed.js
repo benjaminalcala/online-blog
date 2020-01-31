@@ -40,7 +40,7 @@ class Feed extends Component {
       .catch(this.catchError);
 
     this.loadPosts();
-    const socket = openSocket('http://localhost:8080');
+    const socket = openSocket(`'https://blogapp-ben.herokuapp.com:${process.env.PORT}`);
     socket.on('posts', data => {
       if (data.action === 'create') {
         this.addPost(data.post);
